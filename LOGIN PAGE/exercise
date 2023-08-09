@@ -1,0 +1,42 @@
+function ListNode(val, next) {
+    this.val = (val === undefined ? 0 : val);
+    this.next = (next === undefined ? null : next);
+}
+
+function mergeTwoLists(l1, l2) {
+    let dummy = new ListNode(0);
+    let current = dummy;
+
+    while (l1 !== null && l2 !== null) {
+        if (l1.val <= l2.val) {
+            current.next = l1;
+            l1 = l1.next;
+        } else {
+            current.next = l2;
+            l2 = l2.next;
+        }
+        current = current.next;
+    }
+
+    if (l1 !== null) {
+        current.next = l1;
+    } else {
+        current.next = l2;
+    }
+
+    return dummy.next;
+}
+
+// Example usage:
+// Create two sorted linked lists
+let l1 = new ListNode(1);
+l1.next = new ListNode(3);
+l1.next.next = new ListNode(4);
+
+let l2 = new ListNode(1);
+l2.next = new ListNode(2);
+l2.next.next = new ListNode(4);
+
+// Merge the two linked lists and log the result
+let merged = mergeTwoLists(l1, l2);
+console.log(merged); 

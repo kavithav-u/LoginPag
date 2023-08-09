@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://images.hdqwalls.com/download/blur-background-6z-1920x1200.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .header,
+        .body,
+        footer {
+            width: 100%;
+        }
+        
+        .header,
+        .body {
+            height: 40vh;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        footer {
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 50px;
+        }
+        
+        p {
+          font-size: 30px;
+        }
+        
+        button[type="submit"] {
+            background-color: #f9c405;
+            border-radius: 5px;
+            color: #131212;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to home page</h1>
+        </div>
+    
+        <div class="body">
+            <p>You are now logged in.</p>
+        </div>
+     
+        <footer>
+            <form action="/logout" method="get">
+                <button type="submit">Logout</button>
+            </form>
+        </footer>
+    </div>
+</body>
+</html>
